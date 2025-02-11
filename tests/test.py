@@ -15,6 +15,14 @@ class BasicTests(unittest.TestCase):
         # Verifica que la respuesta sea "Hello, World!"
         self.assertEqual(result.status_code, 200)
         self.assertEqual(result.data.decode(), "Hello, World!")
+    
+    def test_ajdps(self):
+        # Envía una solicitud GET a la ruta '/'
+        result = self.app.get('/ajdps')
+        
+        # Verifica que la respuesta sea "Hello, World!"
+        self.assertEqual(result.status_code, 200)
+        self.assertEqual(result.data.decode(), "Hola, soy Antonio José Del Pino Sabio")
 
 
 if __name__ == "__main__":
